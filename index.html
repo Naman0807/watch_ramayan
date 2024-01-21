@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Include Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>Ramayan by Ramanand Sagar</title>
@@ -14,8 +13,7 @@
 
 <body class="bg-yellow-400">
     <div class="container mx-auto p-4">
-
-        <div class="flex justify-between items-center mt-4">
+        <div class="flex justify-between items-center">
             <img src="https://freepngimg.com/thumb/rama/88667-body-jewelry-ramayana-sita-text-rama.png" height="200px"
                 width="200px" alt="Ramayan">
             <div class="flex items-center">
@@ -66,7 +64,8 @@
         <footer class="mt-4 text-center">
             </button>
             <div class="foot">
-                <h1 class="text-2xl">Made by <a href="https://naman0807.github.io/myself/" target="_blank">Naman</a>
+                <h1 class="text-2xl">Made by <a href="https://naman0807.github.io/myself/" target="_blank"
+                        class="underline">Naman</a>
                     with ❤</h1>
             </div>
         </footer>
@@ -103,6 +102,16 @@
             var videoPlayer = document.getElementById("video-player");
             videoPlayer.src = videoUrl;
         }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNC60ZWM1K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-BNC60ZWM1K');
     </script>
 
 
