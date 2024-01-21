@@ -93,6 +93,7 @@
                 behavior: "smooth"
             });
         });
+
         function playVideo(videoUrl) {
             window.scrollTo({
                 top: videoPlayerOffset,
@@ -100,8 +101,6 @@
             });
             var videoPlayer = document.getElementById("video-player");
             videoPlayer.src = videoUrl;
-            videoPlayer.load();
-            videoPlayer.play();
         }
     </script>
 
