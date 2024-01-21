@@ -7,31 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Include Tailwind CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <title>Watch Ramayan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Ramayan by Ramanand Sagar</title>
+    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-yellow-400">
     <div class="container mx-auto p-4">
 
-        <!-- Navbar -->
-        <div class="mt-4 text-xl flex justify-between items-center">
-            <h1 class="text-3xl font-bold">Ramayan by Ramanand Sagar</h1>
-            <a href="https://www.instagram.com/naman_080" class="text-blue-500">Follow on Instagram</a>
+        <div class="flex justify-between items-center mt-4">
+            <img src="https://freepngimg.com/thumb/rama/88667-body-jewelry-ramayana-sita-text-rama.png" height="200px"
+                width="200px" alt="Ramayan">    
+            <div class="flex items-center">
+                <a href="https://www.instagram.com/naman_080" target="_blank" class="text-black text-3xl mx-2">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://github.com/Naman0807/watch_ramayan/" target="_blank" class="text-black text-3xl mx-2">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
         </div>
-        <p class="my-4 text-xl">Click on the episode number to watch that episode. एपिसोड को देखने के लिए एपिसोड नंबर पर
-            क्लिक
-            करें| એપિસોડ જોવા માટે એપિસોડ નંબર પર ક્લિક કરો.</p>
+        <p class="my-4 text-xl text-black">Click on the episode number to watch that episode. एपिसोड को देखने के लिए
+            एपिसोड नंबर पर क्लिक करें| એપિસોડ જોવા માટે એપિસોડ નંબર પર ક્લિક કરો.</p>
         <!-- Navbar end -->
-        <hr>
+        <hr class="my-8">
 
         <div class="mx-auto w-full md:w-11/12 h-screen mb-8">
             <iframe id="video-player" class="w-full h-full rounded-md shadow-md"
-                src="https://www.youtube.com/embed/RG3Hqth0Eus" frameborder="1" allow="autoplay; encrypted-media"
+                src="https://www.youtube.com/embed/RG3Hqth0Eus" frameborder="0" allow="autoplay; encrypted-media"
                 allowfullscreen></iframe>
+            </button>
         </div>
 
         <!-- Main content start -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-1">
             <script>
                 const playlistId = "PLFPJRCFRDARSZofcQcV6m7Pu2EAL8_1dv";
                 const baseUrl = "https://www.youtube.com/embed/";
@@ -39,9 +48,9 @@
 
                 for (let i = 1; i <= 78; i++) {
                     const episodeLink = `${baseUrl}ep-${i}${channelParam}${i}`;
-                    document.write(`<div class="mb-4">
-                        <a href="javascript:void(0);" onclick="playVideo('${episodeLink}');"
-                            class="border border-black block bg-white p-3 rounded-md shadow-md hover:shadow-2xl transition duration-300 ease-in-out">
+                    document.write(`<div class="mb-1">
+                        <a href="#" onclick="playVideo('${episodeLink}');"
+                            class="border border-yellow-900 block bg-gray-100 hover:bg-yellow-500 p-4 rounded-md shadow-sm hover:shadow-2xl transition duration-300 ease-in-out abc">
                             Episode ${i}
                         </a>
                     </div>`);
@@ -49,23 +58,55 @@
             </script>
         </div>
 
-        <hr>
+        <button title="Scroll to Top" id="scrollToTopBtn"
+            class="fixed bottom-4 right-4 border bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full text-center transition duration-300 hidden">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <hr class="my-8">
         <footer class="mt-4 text-center">
+            </button>
             <div class="foot">
-                <h1 class="text-2xl">Made by Naman with ❤</h1>
+                <h1 class="text-2xl">Made by Naman with❤</h1>
             </div>
         </footer>
     </div>
 
-    <!-- Script to handle video source change -->
     <script>
+        var videoPlayerOffset = document.getElementById("video-player").offsetTop;
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        document.getElementById("scrollToTopBtn").addEventListener("click", function () {
+            window.scrollTo({
+                top: videoPlayerOffset,
+                behavior: "smooth"
+            });
+        });
         function playVideo(videoUrl) {
+            window.scrollTo({
+                top: videoPlayerOffset,
+                behavior: "smooth"
+            });
             var videoPlayer = document.getElementById("video-player");
             videoPlayer.src = videoUrl;
             videoPlayer.load();
             videoPlayer.play();
         }
     </script>
+
+
 </body>
 
 </html>
