@@ -11,11 +11,13 @@
     <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
 </head>
 
-<body class="bg-yellow-400">
-    <div class="container mx-auto p-4">
+<body class="bg-yellow-500">
+    <div class="container mx-auto p-4 text-center">
         <div class="flex justify-between items-center">
-            <img src="https://freepngimg.com/thumb/rama/88667-body-jewelry-ramayana-sita-text-rama.png" height="200px"
-                width="200px" alt="Ramayan">
+            <a href="./index.html">
+                <img src="https://freepngimg.com/thumb/rama/88667-body-jewelry-ramayana-sita-text-rama.png"
+                    height="200px" width="200px" alt="Ramayan">
+            </a>
             <div class="flex items-center">
                 <a href="https://www.instagram.com/naman_080" target="_blank" class="text-black text-3xl mx-2">
                     <i class="fab fa-instagram"></i>
@@ -25,44 +27,188 @@
                 </a>
             </div>
         </div>
-        <p class="my-4 text-xl text-black">Click on the episode number to watch that episode. एपिसोड को देखने के लिए
-            एपिसोड नंबर पर क्लिक करें| એપિસોડ જોવા માટે એપિસોડ નંબર પર ક્લિક કરો.</p>
-        <!-- Navbar end -->
-        <hr class="my-8">
+        <h1 class="text-3xl md:text-5xl font-bold text-black mb-2">Ramayan</h1>
+        <!-- Life Events Section -->
+        <section class="my-8 bg-gray-200 p-6 rounded-md shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-black">The Journey of Lord Ram</h2>
+            <ul class="text-left leading-7">
+                <li class="mb-4">
+                    <strong class="text-black">Birth:</strong>
+                    Lord Ram, the embodiment of righteousness, took his first breath in the sacred city of Ayodhya. His
+                    arrival,
+                    celebrated annually as Ram Navami, filled the kingdom with divine radiance, bringing joy and
+                    prosperity to
+                    all.
+                </li>
+                <li class="mb-4">
+                    <strong class="text-black">Marriage:</strong>
+                    In the illustrious Swayamvar ceremony, Lord Ram showcased his strength and devotion by lifting Lord
+                    Shiva's
+                    divine bow, earning the hand of Sita. Their union symbolizes the eternal bond of love and virtue.
+                </li>
+                <li class="mb-4">
+                    <strong class="text-black">Exile:</strong>
+                    The profound commitment to honor his father's promise led Ram into the enchanting forests. For 14
+                    years, he
+                    embraced simplicity, learned from sages, and connected with nature, exemplifying humility and
+                    resilience.
+                </li>
+                <li class="mb-4">
+                    <strong class="text-black">Abduction of Sita:</strong>
+                    The dark clouds of destiny cast their shadows as the demon king Ravana abducted Sita. The ensuing
+                    struggle
+                    epitomizes the eternal battle between good and evil, righteousness, and deception.
+                </li>
+                <li class="mb-4">
+                    <strong class="text-black">Victory over Ravana:</strong>
+                    The battle of Lanka witnessed the triumph of righteousness as Lord Ram, with unwavering
+                    determination and
+                    divine guidance, vanquished the mighty Ravana, rescuing Sita and restoring dharma.
+                </li>
+                <li class="mb-4">
+                    <strong class="text-black">Return to Ayodhya:</strong>
+                    Ayodhya, once shrouded in darkness, radiated with the joyous return of Lord Ram. The heartwarming
+                    welcome by
+                    his loyal subjects marked the beginning of the golden era, a testament to the victory of light over
+                    darkness.
+                </li>
+                <li class="mb-4">
+                    <strong class="text-black">Banishment of Sita:</strong>
+                    In the face of societal doubts, Lord Ram reluctantly made the painful decision to banish Sita. This
+                    heart-wrenching moment reflects the challenges faced by those devoted to duty and honor.
+                </li>
+                <li>
+                    <strong class="text-black">Departure from Earth:</strong>
+                    Lord Ram's divine journey on Earth concluded as he returned to his celestial abode. His teachings,
+                    embedded in
+                    the hearts of his devotees, continue to inspire and guide humanity towards righteousness and
+                    compassion.
+                </li>
+            </ul>
+        </section>
 
-        <div class="mx-auto w-full md:w-11/12 h-screen mb-8">
-            <iframe id="video-player" class="w-full h-full rounded-md shadow-md"
-                src="https://www.youtube.com/embed/RG3Hqth0Eus" frameborder="0" allowfullscreen></iframe>
-            </button>
-        </div>
+        <!-- Character Profiles Section -->
+        <section class="my-8 bg-gray-200 p-6 rounded-md shadow-md">
+            <h2 class="text-2xl font-bold mb-4 text-black">Character Profiles</h2>
+            <!-- Add character profiles for key figures in the Ramayan here -->
+            <div class="flex flex-wrap">
 
-        <!-- Main content start -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-1">
-            <script>
-                const playlistId = "PLFPJRCFRDARSZofcQcV6m7Pu2EAL8_1dv";
-                const baseUrl = "https://www.youtube.com/embed/";
-                const channelParam = "?list=" + playlistId + "&index=";
+                <!-- Character 1: Rama -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Rama</h3>
+                    <p>The protagonist of the epic, Prince of Ayodhya, and the seventh avatar of the god Vishnu.</p>
+                </div>
 
-                for (let i = 1; i <= 78; i++) {
-                    const episodeLink = `${baseUrl}ep-${i}${channelParam}${i}`;
-                    document.write(`<div class="mb-1">
-                        <a href="#" onclick="playVideo('${episodeLink}');"
-                            class="border border-yellow-900 block bg-gray-100 hover:bg-yellow-500 p-4 rounded-md shadow-sm hover:shadow-2xl transition duration-300 ease-in-out abc">
-                            Episode ${i}
-                        </a>
-                    </div>`);
-                }
-            </script>
-        </div>
+                <!-- Character 2: Sita -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Sita</h3>
+                    <p>Rama's wife, who is kidnapped by Ravana, leading to the main events of the epic.</p>
+                </div>
 
-        <button title="Scroll to Top" id="scrollToTopBtn"
-            class="fixed bottom-4 right-4 border bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-full text-center transition duration-300 hidden">
-            <i class="fas fa-arrow-up"></i>
-        </button>
+                <!-- Character 3: Lakshmana -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Lakshmana</h3>
+                    <p>Rama's younger brother and a devoted companion. He accompanies Rama and Sita during their exile.
+                    </p>
+                </div>
+
+                <!-- Character 4: Hanuman -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Hanuman</h3>
+                    <p>A powerful monkey god and a devoted follower of Rama. He plays a crucial role in the rescue of
+                        Sita.</p>
+                </div>
+
+                <!-- Character 5: Ravana -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Ravana</h3>
+                    <p>The primary antagonist of the epic, a powerful demon king who kidnaps Sita.</p>
+                </div>
+
+                <!-- Character 6: Dasharatha -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Dasharatha</h3>
+                    <p>The king of Ayodhya and the father of Rama.</p>
+                </div>
+
+                <!-- Character 7: Kaikeyi -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Kaikeyi</h3>
+                    <p>One of Dasharatha's wives and the mother of Bharata. Her actions play a significant role in
+                        Rama's exile.</p>
+                </div>
+
+                <!-- Character 8: Bharata -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Bharata</h3>
+                    <p>Rama's younger half-brother and the son of Kaikeyi. He is devoted to Rama and rules Ayodhya in
+                        his absence.</p>
+                </div>
+
+                <!-- Character 9: Sugriva -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Sugriva</h3>
+                    <p>The monkey king who becomes an ally of Rama. Hanuman helps him regain his kingdom from his
+                        brother Vali.</p>
+                </div>
+
+                <!-- Character 10: Vali -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Vali</h3>
+                    <p>Sugriva's brother and the previous monkey king, who is defeated by Rama.</p>
+                </div>
+
+                <!-- Character 11: Vibhishana -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Vibhishana</h3>
+                    <p>Ravana's younger brother, who defects to Rama's side during the war.</p>
+                </div>
+
+                <!-- Character 12: Jatayu -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Jatayu</h3>
+                    <p>A vulture and a friend of Rama who tries to rescue Sita from Ravana but is mortally wounded in
+                        the process.</p>
+                </div>
+
+                <!-- Character 13: Shurpanakha -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Shurpanakha</h3>
+                    <p>Ravana's sister, whose advances towards Rama and Lakshmana lead to a chain of events.</p>
+                </div>
+
+                <!-- Character 14: Trijata -->
+                <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+                    <h3 class="text-lg font-bold mb-2">Trijata</h3>
+                    <p>A demoness in Ravana's palace who sympathizes with Sita and tries to comfort her.</p>
+                </div>
+
+                <!-- Add more character profiles as needed -->
+            </div>
+        </section>
+
+        <p class="mb-5 text-3xl">watch all the episode of the Ramayan by Ramanand Sagar</p>
+        <a href="./ramayan.html"
+            class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full inline-block transition duration-300">Watch
+            Episodes</a>
+
+        <!-- Trivia and Quizzes Section -->
+        <section class="my-8 bg-gray-200 p-6 rounded-md shadow-md">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-black">Test Your Knowledge</h2>
+            <p class="text-lg text-gray-800 mb-4">Explore the world of Ramayan through our interactive quizzes. Click
+                the links below to start:</p>
+
+            <ul class="list-inside list-disc">
+                <li class="mb-2">
+                    <a href="quiz1.html" class="text-black hover:underline">Quiz 1: Introduction to Ramayan</a>
+                </li>
+                <!-- Add more quiz links as needed -->
+            </ul>
+        </section>
+
 
         <hr class="my-8">
         <footer class="mt-4 text-center">
-            </button>
             <div class="foot">
                 <h1 class="text-2xl">Made by <a href="https://naman0807.github.io/myself/" target="_blank"
                         class="underline">Naman</a>
@@ -70,50 +216,6 @@
             </div>
         </footer>
     </div>
-
-    <script>
-        var videoPlayerOffset = document.getElementById("video-player").offsetTop;
-
-        window.onscroll = function () {
-            scrollFunction();
-        };
-
-        function scrollFunction() {
-            var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        }
-
-        document.getElementById("scrollToTopBtn").addEventListener("click", function () {
-            window.scrollTo({
-                top: videoPlayerOffset,
-                behavior: "smooth"
-            });
-        });
-
-        function playVideo(videoUrl) {
-            window.scrollTo({
-                top: videoPlayerOffset,
-                behavior: "smooth"
-            });
-            var videoPlayer = document.getElementById("video-player");
-            videoPlayer.src = videoUrl;
-        }
-    </script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNC60ZWM1K"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-BNC60ZWM1K');
-    </script>
-
 
 </body>
 
