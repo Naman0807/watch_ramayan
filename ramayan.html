@@ -35,6 +35,16 @@
         <div class="mx-auto w-full md:w-11/12 h-screen mb-8">
             <iframe id="video-player" class="w-full h-full rounded-md shadow-md"
                 src="https://www.youtube.com/embed/RG3Hqth0Eus" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="flex justify-center mb-4">
+            <button onclick="loadPreviousEpisode()"
+                class="border border-yellow-900 bg-gray-100 p-2 mx-2 rounded-md hover:bg-yellow-600 hover:text-white">
+                Previous Episode
+            </button>
+            <button onclick="loadNextEpisode()"
+                class="border border-yellow-900 bg-gray-100 p-2 mx-2 rounded-md hover:bg-yellow-600 hover:text-white">
+                Next Episode
             </button>
         </div>
 
@@ -44,15 +54,45 @@
                 const playlistId = "PLFPJRCFRDARSZofcQcV6m7Pu2EAL8_1dv";
                 const baseUrl = "https://www.youtube.com/embed/";
                 const channelParam = "?list=" + playlistId + "&index=";
+                var currentEpisodeIndex = 1; // Initial episode index
 
                 for (let i = 1; i <= 78; i++) {
                     const episodeLink = `${baseUrl}ep-${i}${channelParam}${i}`;
                     document.write(`<div class="mb-1">
-                        <a href="#" onclick="playVideo('${episodeLink}');"
+                        <a href="#" onclick="playVideo('${episodeLink}', ${i});"
                             class="border border-yellow-900 block bg-gray-100 hover:bg-yellow-500 p-4 rounded-md shadow-sm hover:shadow-2xl transition duration-300 ease-in-out abc">
                             Episode ${i}
                         </a>
                     </div>`);
+                }
+
+                function loadVideoByIndex(index) {
+                    const episodeLink = `${baseUrl}ep-${index}${channelParam}${index}`;
+                    document.getElementById("video-player").src = episodeLink;
+                    currentEpisodeIndex = index;
+                }
+
+                function loadPreviousEpisode() {
+                    if (currentEpisodeIndex > 1) {
+                        loadVideoByIndex(currentEpisodeIndex - 1);
+                    }
+                }
+
+                function loadNextEpisode() {
+                    const totalEpisodes = 78; // Set the total number of episodes
+                    if (currentEpisodeIndex < totalEpisodes) {
+                        loadVideoByIndex(currentEpisodeIndex + 1);
+                    }
+                }
+
+                function playVideo(videoUrl, episodeIndex) {
+                    window.scrollTo({
+                        top: videoPlayerOffset,
+                        behavior: "smooth"
+                    });
+                    var videoPlayer = document.getElementById("video-player");
+                    videoPlayer.src = videoUrl;
+                    currentEpisodeIndex = episodeIndex;
                 }
             </script>
         </div>
@@ -64,7 +104,6 @@
 
         <hr class="my-8">
         <footer class="mt-4 text-center">
-            </button>
             <div class="foot">
                 <h1 class="text-2xl">Made by <a href="https://naman0807.github.io/myself/" target="_blank"
                         class="underline">Naman</a>
@@ -95,15 +134,6 @@
                 behavior: "smooth"
             });
         });
-
-        function playVideo(videoUrl) {
-            window.scrollTo({
-                top: videoPlayerOffset,
-                behavior: "smooth"
-            });
-            var videoPlayer = document.getElementById("video-player");
-            videoPlayer.src = videoUrl;
-        }
     </script>
 
     <!-- Google tag (gtag.js) -->
@@ -115,8 +145,6 @@
 
         gtag('config', 'G-BNC60ZWM1K');
     </script>
-
-
 </body>
 
 </html>
