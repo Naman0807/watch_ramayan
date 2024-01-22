@@ -223,6 +223,32 @@
             </ul>
         </section>
 
+        <div class="mt-8">
+            <h2 class="text-3xl font-bold mb-6 text-black">Send us your review</h2>
+            <form name="submit-to-google-sheet"
+                class="border border-yellow-600 max-w-xl mx-auto p-8 bg-white rounded-md shadow-md">
+                <div class="mb-6">
+                    <label for="name" class="text-gray-800 block mb-2">Your Name:</label>
+                    <input type="text" id="name" name="name"
+                        class="w-full border rounded p-3 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent bg-gray-100">
+                </div>
+                <div class="mb-6">
+                    <label for="email" class="text-gray-800 block mb-2">Your Email:</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full border rounded p-3 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent bg-gray-100">
+                </div>
+                <div class="mb-6">
+                    <label for="review" class="text-gray-800 block mb-2">Share Your Review:</label>
+                    <textarea id="review" name="review" rows="4"
+                        class="w-full border rounded p-3 focus:outline-none focus:ring-2 focus:ring-yellow-600 focus:border-transparent bg-gray-100"></textarea>
+                </div>
+                <button id="btntosub" type="button"
+                    class="bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-3 px-6 rounded-full inline-block transition duration-300">
+                    Send Message
+                </button>
+            </form>
+        </div>
+
 
         <hr class="my-8">
         <footer class="mt-4 text-center">
@@ -241,6 +267,21 @@
 
         gtag('config', 'G-BNC60ZWM1K');
     </script>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzW06TEl5ZNAZj0oE3YEFPDBLUnyDBc7wwWJdMNfHJClSWUgyRQHiNU1maEyRNQOMDE/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById('msg');
+        const btn = document.getElementById('btntosub')
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+
 </body>
 
 </html>
