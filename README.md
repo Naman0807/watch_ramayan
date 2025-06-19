@@ -1,3 +1,5 @@
+
+
 # Watch Ramayan
 
 Watch Ramayan is a website dedicated to streaming the iconic television series "Ramayan" created by Ramanand Sagar.
@@ -28,3 +30,7 @@ Contributions are welcome! Feel free to open issues and pull requests.
 ## Author
 
 - [Naman](https://github.com/naman0807)
+
+Copyright © 2025 Naman.
+Unauthorized use is strictly prohibited.
+Contact for permission.
